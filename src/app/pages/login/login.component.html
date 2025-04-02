@@ -1,0 +1,48 @@
+<div class="parent">
+  <div class="login-box">
+    <form action="#">
+      <h2>Login</h2>
+      <div class="input-box">
+        <span class="icon">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+        <input
+          type="email"
+          [(ngModel)]="loginObj.username"
+          name="username"
+          #username="ngModel"
+          id="username"
+          required
+        />
+        <label for="username">Email</label>
+        @if(username.invalid && username.touched){
+        <div class="text-white">
+          {{ "REQUIRED" | custom : username.name }}
+        </div>
+        }
+      </div>
+
+      <div class="input-box">
+        <span class="icon">
+          <i class="fa-solid fa-lock"></i>
+        </span>
+        <input
+          type="password"
+          [(ngModel)]="loginObj.password"
+          name="password"
+          #password="ngModel"
+          id="password"
+          required
+        />
+        <label for="password">Password</label>
+        @if(password.invalid && password.touched){
+        <div class="text-white mt-1">
+          {{ "REQUIRED" | custom : password.name }}
+        </div>
+        }
+      </div>
+
+      <button type="button" (click)="onLogin($event)">Login</button>
+    </form>
+  </div>
+</div>
