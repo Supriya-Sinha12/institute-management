@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_URL: 'https://projectapi.gerasim.in/api/',
+  API_URL: 'https://projectapi.gerasim.in/api/InstituteManagement/',
 };
