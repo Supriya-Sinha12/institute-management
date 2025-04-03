@@ -21,11 +21,11 @@ export const Constant = {
   },
   API_METHOD: {
     STUDENT: {
-      GET_ALL_STUDENT: 'GetStudents',
-      CREATE_STUDENT: 'CreateStudent',
-      UPDATE_STUDENT: 'UpdateStudent',
-      DELETE_STUDENT: 'DeleteStudentById',
-      GetStudentBatchesWithFees: 'student/GetStudentBatchesWithFees',
+      GET_ALL_STUDENT: apiUrl + 'GetStudents',
+      CREATE_STUDENT: apiUrl + 'CreateStudent',
+      UPDATE_STUDENT: apiUrl + 'UpdateStudent',
+      DELETE_STUDENT: apiUrl + 'DeleteStudentById',
+      GetStudentBatchesWithFees: apiUrl + 'student/GetStudentBatchesWithFees',
     },
     ENROLLMENT: { GET_ENROLLMENTS: apiUrl + 'GetEnrollments' },
     DASHBOARD_DATA: { GET_DASHBOARD_DATA: apiUrl + 'GetDashboardData' },
