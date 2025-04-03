@@ -1,7 +1,7 @@
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import { IDashboarddata } from '../Model/interface/dashboardData';
 
-const envirURL = environment.API_URL;
+const apiUrl = environment.API_URL;
 
 export const VALIDATION_MESSAGE = {
   required: 'This is Required',
@@ -21,19 +21,19 @@ export const Constant = {
   },
   API_METHOD: {
     STUDENT: {
-      GET_ALL_STUDENT: envirURL + 'GetStudents',
-      CREATE_STUDENT: envirURL + 'CreateStudent',
-      UPDATE_STUDENT: envirURL + 'UpdateStudent',
-      DELETE_STUDENT: envirURL + 'DeleteStudentById',
-      GetStudentBatchesWithFees: envirURL + 'student/GetStudentBatchesWithFees',
+      GET_ALL_STUDENT: apiUrl + 'GetStudents',
+      CREATE_STUDENT: apiUrl + 'CreateStudent',
+      UPDATE_STUDENT: apiUrl + 'UpdateStudent',
+      DELETE_STUDENT: apiUrl + 'DeleteStudentById',
+      GetStudentBatchesWithFees: apiUrl + 'student/GetStudentBatchesWithFees',
     },
-    ENROLLMENT: { GET_ENROLLMENTS: envirURL + 'GetEnrollments' },
-    DASHBOARD_DATA: { GET_DASHBOARD_DATA: envirURL + 'GetDashboardData' },
+    ENROLLMENT: { GET_ENROLLMENTS: apiUrl + 'GetEnrollments' },
+    DASHBOARD_DATA: { GET_DASHBOARD_DATA: apiUrl + 'GetDashboardData' },
     PAYMENTS: {
-      GET_FEES: envirURL + 'GetFees',
+      GET_FEES: apiUrl + 'GetFees',
     },
     BATCH: {
-      GET_BATCH: envirURL + 'GetBatches',
+      GET_BATCH: apiUrl + 'GetBatches',
     },
   },
 
