@@ -1,5 +1,4 @@
 import { environment } from '../../environments/environment';
-import { IDashboarddata } from '../Model/interface/dashboardData';
 
 const apiUrl = environment.API_URL;
 
