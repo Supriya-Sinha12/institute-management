@@ -3,11 +3,10 @@ import { IDashboarddata } from '../Model/interface/dashboardData';
 
 const envirURL = environment.API_URL;
 
-export const VALIDATION_MESSAGE  = {
+export const VALIDATION_MESSAGE = {
   required: 'This is Required',
-  minLength: 'mIN 10 Cher Needed'
-}
-
+  minLength: 'mIN 10 Cher Needed',
+};
 
 export const Constant = {
   VALIDATION_MESSAGE: {
@@ -22,11 +21,11 @@ export const Constant = {
   },
   API_METHOD: {
     STUDENT: {
-      GET_ALL_STUDENT: 'GetStudents',
-      CREATE_STUDENT: 'CreateStudent',
-      UPDATE_STUDENT: 'UpdateStudent',
-      DELETE_STUDENT: 'DeleteStudentById',
-      GetStudentBatchesWithFees: 'student/GetStudentBatchesWithFees',
+      GET_ALL_STUDENT: envirURL + 'GetStudents',
+      CREATE_STUDENT: envirURL + 'CreateStudent',
+      UPDATE_STUDENT: envirURL + 'UpdateStudent',
+      DELETE_STUDENT: envirURL + 'DeleteStudentById',
+      GetStudentBatchesWithFees: envirURL + 'student/GetStudentBatchesWithFees',
     },
     ENROLLMENT: { GET_ENROLLMENTS: envirURL + 'GetEnrollments' },
     DASHBOARD_DATA: { GET_DASHBOARD_DATA: envirURL + 'GetDashboardData' },
@@ -55,16 +54,6 @@ export const Constant = {
       routerLink: '/admin/batch/0',
     },
     {
-      icon: 'bi-book me-2',
-      label: 'Batches',
-      routerLink: '/admin/batches',
-    },
-    {
-      icon: 'bi bi-person me-2',
-      label: 'Teacher',
-      routerLink: '/admin/dashboard',
-    },
-    {
       icon: 'bi bi-person me-2',
       label: 'Enrollment',
       routerLink: '/admin/enrollments/0',
@@ -77,11 +66,6 @@ export const Constant = {
     {
       icon: 'bi bi-cash me-2',
       label: 'Pending payments',
-      routerLink: '/admin/dashboard',
-    },
-    {
-      icon: 'bi bi-gear me-2',
-      label: 'Setting',
       routerLink: '/admin/dashboard',
     },
   ],

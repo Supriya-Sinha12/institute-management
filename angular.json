@@ -75,7 +75,7 @@
               "buildTarget": "fess_collection_erp:build:development"
             }
           },
-          "options": { "proxyConfig": "proxy.conf.json" },
+          "options": {},
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -96,6 +96,9 @@
             "styles": ["src/styles.scss"],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

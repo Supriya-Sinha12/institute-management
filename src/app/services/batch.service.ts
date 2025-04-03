@@ -17,6 +17,7 @@ export class BatchService {
   }
 
   loadBatches(): Observable<IBatch[]> {
+    console.log('API URL:', Constant.API_METHOD.BATCH.GET_BATCH);
     return this.http.get<IBatch[]>(Constant.API_METHOD.BATCH.GET_BATCH);
   }
 }
