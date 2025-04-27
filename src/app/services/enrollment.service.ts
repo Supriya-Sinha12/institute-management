@@ -22,4 +22,11 @@ export class EnrollmentService {
       Constant.API_METHOD.ENROLLMENT.GET_ENROLLMENTS
     );
   }
+
+  createEnrollment(data: any) {
+    return this.http.post(
+      Constant.API_METHOD.ENROLLMENT.CREATE_ENROLLMENTS,
+      data
+    );
+  }
 }

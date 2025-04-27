@@ -4,7 +4,7 @@ const apiUrl = environment.API_URL;
 
 export const VALIDATION_MESSAGE = {
   required: 'This is Required',
-  minLength: 'mIN 10 Cher Needed',
+  minLength: 'Min 10 character is required',
 };
 
 export const Constant = {
@@ -26,13 +26,20 @@ export const Constant = {
       DELETE_STUDENT: apiUrl + 'DeleteStudentById',
       GetStudentBatchesWithFees: apiUrl + 'student/GetStudentBatchesWithFees',
     },
-    ENROLLMENT: { GET_ENROLLMENTS: apiUrl + 'GetEnrollments' },
+    ENROLLMENT: {
+      GET_ENROLLMENTS: apiUrl + 'GetEnrollments',
+      CREATE_ENROLLMENTS: apiUrl + 'register-student',
+    },
+
+    CREATE_ENROLLMENTS: apiUrl + 'register-student',
     DASHBOARD_DATA: { GET_DASHBOARD_DATA: apiUrl + 'GetDashboardData' },
     PAYMENTS: {
       GET_FEES: apiUrl + 'GetFees',
     },
     BATCH: {
       GET_BATCH: apiUrl + 'GetBatches',
+      CREATE_BATCH: apiUrl + 'CreateBatch',
+      UPDATE_BATCH: apiUrl + 'UpdateBatch',
     },
   },
 

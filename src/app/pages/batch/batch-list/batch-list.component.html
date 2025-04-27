@@ -140,7 +140,11 @@
           <div class="col-12">
             <div class="card shadow border-0 mb-7">
               <div class="table-responsive">
-                <table class="table table-hover table-nowrap">
+                <app-table
+                  [columnArray]="columnData"
+                  [gridData]="totalBatches"
+                ></app-table>
+                <!--  <table class="table table-hover table-nowrap">
                   <thead class="thead-light">
                     <tr>
                       <th scope="col">Batch Name</th>
@@ -163,7 +167,7 @@
                     </tr>
                     }
                   </tbody>
-                </table>
+                </table> -->
               </div>
             </div>
           </div>
