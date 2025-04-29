@@ -27,7 +27,6 @@ export class LoginComponent {
     }
     if (this.loginObj.username == 'Admin' && this.loginObj.password == '1122') {
       this.router.navigateByUrl('admin/dashboard');
-      // this.router.navigate(['admin/dashboard'])
     } else {
       alert('Wrong credential');
     }

@@ -12,6 +12,7 @@
           name="username"
           #username="ngModel"
           id="username"
+          [class.filled]="loginObj.username"
           required
         />
         <label for="username">Email</label>
@@ -32,6 +33,7 @@
           name="password"
           #password="ngModel"
           id="password"
+          [class.filled]="loginObj.password"
           required
         />
         <label for="password">Password</label>
