@@ -105,10 +105,7 @@ export class EnrollmentsComponent {
   onSubmitEnrollment() {
     let payload = this.enrollForm.value;
     payload.EnrollDate = new Date(payload.EnrollDate).toISOString();
-    payload.BatchId = this.batches;
-    console.log('payload form:', payload);
     this.enrollmentService.createEnrollment(payload).subscribe((response) => {
-      console.log('response:', response);
       this.getRecentEnrollments();
     });
   }
@@ -118,11 +115,11 @@ export class EnrollmentsComponent {
       .loadEnrollments()
       .subscribe((data: IGetEnrollments[]) => {
         if (data) {
-          const last5daysAgo = new Date();
-          last5daysAgo.setDate(last5daysAgo.getDate() - 5);
+          const last10daysAgo = new Date();
+          last10daysAgo.setDate(last10daysAgo.getDate() - 5);
           this.recentEnrollment = data.filter((enrollment) => {
             const enrollDate = new Date(enrollment.enrollDate);
-            return enrollDate >= last5daysAgo;
+            return enrollDate >= last10daysAgo;
           });
         }
       });
