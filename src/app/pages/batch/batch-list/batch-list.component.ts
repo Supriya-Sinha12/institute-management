@@ -5,6 +5,7 @@ import {
   FormGroup,
   ReactiveFormsModule,
   Validators,
+  FormsModule,
 } from '@angular/forms';
 import { interval } from 'rxjs';
 import { Constant } from '../../../Constant/Constant';
@@ -12,9 +13,10 @@ import { BatchService } from '../../../services/batch.service';
 import { IBatch } from '../../../Model/interface/batch';
 import { TableComponent } from '../../../reusable/component/table/table.component';
 import { ITableData } from '../../../Model/interface/tableData';
+import { FilterPipe } from '../../../pipes/filter.pipe';
 @Component({
   selector: 'app-batch-list',
-  imports: [ReactiveFormsModule, TableComponent],
+  imports: [ReactiveFormsModule, TableComponent, FormsModule, FilterPipe],
 
   templateUrl: './batch-list.component.html',
   styleUrl: './batch-list.component.scss',
@@ -31,6 +33,7 @@ export class BatchListComponent {
   validationConstant: any;
 
   timer = interval(5000);
+  searchtext: any;
 
   columnData: ITableData[] = [
     {

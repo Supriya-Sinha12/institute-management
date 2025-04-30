@@ -12,6 +12,7 @@
                 <input
                   class="me-2"
                   type="search"
+                  [(ngModel)]="searchtext"
                   placeholder="Search"
                   aria-label="Search"
                 />
@@ -37,7 +38,7 @@
               <div class="table-responsive">
                 <app-table
                   [columnArray]="columnData"
-                  [gridData]="totalBatches"
+                  [gridData]="totalBatches | filter : searchtext"
                 ></app-table>
               </div>
             </div>

@@ -2,21 +2,28 @@ import { Component, inject, signal } from '@angular/core';
 import { StudentService } from '../../../services/student.service';
 import { Student } from '../../../Model/class/Student';
 import { CardComponent } from '../../../reusable/component/card/card.component';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Constant } from '../../../Constant/Constant';
 import { CustomPipe } from '../../../pipe/custom.pipe';
 import { RouterLink } from '@angular/router';
+import { FilterPipe } from '../../../pipes/filter.pipe';
 
 @Component({
   selector: 'app-students',
-  imports: [ReactiveFormsModule, CustomPipe, RouterLink],
+  imports: [
+    ReactiveFormsModule,
+    CustomPipe,
+    RouterLink,
+    FilterPipe,
+    FormsModule,
+  ],
   templateUrl: './students-list.component.html',
   styleUrl: './students-list..component.scss',
 })
 export class StudentsListComponent {
   studentService = inject(StudentService);
 
-  requiredMessage: string = "This Is Required";
+  requiredMessage: string = 'This Is Required';
   studentData: Student[] = [];
   isEditMode: boolean = false;
   isSubmittedForm: boolean = false;
@@ -24,6 +31,7 @@ export class StudentsListComponent {
   modalFormInputs = Constant.modalForm;
 
   studForm: FormGroup = new FormGroup({});
+  searchtext: any;
 
   constructor() {
     this.loadStudentsData();
